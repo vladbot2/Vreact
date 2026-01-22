@@ -3,7 +3,14 @@ import axios from "axios";
 import {Link, useNavigate} from "react-router-dom";
 import {APP_ENV} from "../env";
 import type {ILoginUser} from "../types/account/ILoginUser.ts";
+<<<<<<< HEAD
 import {useGoogleLogin} from "@react-oauth/google";
+=======
+<<<<<<< HEAD
+=======
+import {useGoogleLogin} from "@react-oauth/google";
+>>>>>>> 0836948cd765c84e457c61238868684ca2780c47
+>>>>>>> 456b6310aad55a6943e785cf21b6c6f5a78ee605
 
 const LoginPage = () => {
     const [form] = Form.useForm<ILoginUser>();
@@ -35,6 +42,11 @@ const LoginPage = () => {
         // navigate("/");
     }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 456b6310aad55a6943e785cf21b6c6f5a78ee605
     const handleLoginClick = useGoogleLogin({
         onSuccess: tokenResponse =>
         {
@@ -43,6 +55,10 @@ const LoginPage = () => {
         },
     });
 
+<<<<<<< HEAD
+=======
+>>>>>>> 0836948cd765c84e457c61238868684ca2780c47
+>>>>>>> 456b6310aad55a6943e785cf21b6c6f5a78ee605
     return (
         <>
             <div className={"min-h-screen xl:flex"}>
@@ -104,6 +120,12 @@ const LoginPage = () => {
                                     </Form.Item>
                                 </div>
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 456b6310aad55a6943e785cf21b6c6f5a78ee605
                                 <div className={"mt-4"}>
                                     <button
                                         onClick={(e) => {
@@ -115,6 +137,10 @@ const LoginPage = () => {
                                         {'Вхід через Google'}
                                     </button>
                                 </div>
+<<<<<<< HEAD
+=======
+>>>>>>> 0836948cd765c84e457c61238868684ca2780c47
+>>>>>>> 456b6310aad55a6943e785cf21b6c6f5a78ee605
                             </Form>
                         </div>
                     </div>

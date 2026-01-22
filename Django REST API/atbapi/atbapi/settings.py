@@ -1,3 +1,14 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+from pathlib import Path
+
+BASE_DIR = Path(__file__).resolve().parent.parent
+
+SECRET_KEY = 'django-insecure-change-me'
+
+=======
+>>>>>>> 456b6310aad55a6943e785cf21b6c6f5a78ee605
 """
 Django settings for atbapi project.
 
@@ -23,21 +34,61 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-yd+4%j(nsycp)m=_kio14eo68bzsk&9s76bkww-xl_@4wn%+yk'
 
 # SECURITY WARNING: don't run with debug turned on in production!
+<<<<<<< HEAD
+=======
+>>>>>>> 0836948cd765c84e457c61238868684ca2780c47
+>>>>>>> 456b6310aad55a6943e785cf21b6c6f5a78ee605
 DEBUG = True
 
 ALLOWED_HOSTS = []
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+INSTALLED_APPS = [
+=======
+>>>>>>> 456b6310aad55a6943e785cf21b6c6f5a78ee605
 # Application definition
 
 INSTALLED_APPS = [
     'users',
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+    'product',
+>>>>>>> 5f3157850eb87e28d70d2e6f1d58428d66ca0ed6
+>>>>>>> 0836948cd765c84e457c61238868684ca2780c47
+>>>>>>> 456b6310aad55a6943e785cf21b6c6f5a78ee605
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    'django.contrib.sites',
+
+    'rest_framework',
+    'rest_framework.authtoken',
+
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    'allauth.socialaccount.providers.google',
+
+    'dj_rest_auth',
+    'dj_rest_auth.registration',
+]
+
+SITE_ID = 1
+
+MIDDLEWARE = [
+=======
+>>>>>>> 456b6310aad55a6943e785cf21b6c6f5a78ee605
     'rest_framework',
     'drf_spectacular',
     'corsheaders',
@@ -60,6 +111,10 @@ REST_FRAMEWORK = {
 
 MIDDLEWARE = [
     "corsheaders.middleware.CorsMiddleware",
+<<<<<<< HEAD
+=======
+>>>>>>> 0836948cd765c84e457c61238868684ca2780c47
+>>>>>>> 456b6310aad55a6943e785cf21b6c6f5a78ee605
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -78,6 +133,13 @@ TEMPLATES = [
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                'django.template.context_processors.debug',
+=======
+>>>>>>> 0836948cd765c84e457c61238868684ca2780c47
+>>>>>>> 456b6310aad55a6943e785cf21b6c6f5a78ee605
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
@@ -89,6 +151,50 @@ TEMPLATES = [
 WSGI_APPLICATION = 'atbapi.wsgi.application'
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
+
+
+AUTH_PASSWORD_VALIDATORS = []
+
+
+LANGUAGE_CODE = 'en-us'
+
+TIME_ZONE = 'UTC'
+
+STATIC_URL = 'static/'
+
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',
+    'allauth.account.auth_backends.AuthenticationBackend',
+]
+
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.TokenAuthentication',
+    ]
+}
+
+
+SOCIALACCOUNT_PROVIDERS = {
+    'google': {
+        'SCOPE': ['profile', 'email'],
+        'AUTH_PARAMS': {'access_type': 'online'},
+    }
+}
+=======
+>>>>>>> 456b6310aad55a6943e785cf21b6c6f5a78ee605
 # Database
 # https://docs.djangoproject.com/en/6.0/ref/settings/#databases
 
@@ -158,6 +264,12 @@ SPECTACULAR_SETTINGS = {
     'VERSION': '1.0.0',
     'SERVE_INCLUDE_SCHEMA': False,
     'COMPONENT_SPLIT_REQUEST': True,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+}
+=======
+>>>>>>> 456b6310aad55a6943e785cf21b6c6f5a78ee605
 }
 
 FRONTEND_URL='http://localhost:5173'
@@ -168,4 +280,25 @@ EMAIL_PORT = 2525
 EMAIL_USE_SSL = True 
 EMAIL_HOST_USER = 'super.novakvova@ukr.net'
 EMAIL_HOST_PASSWORD = 'PdjZ074ufMqpy1MJ'
+<<<<<<< HEAD
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+=======
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+
+INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+
+    'rest_framework',
+    'users',
+]
+
+AUTH_USER_MODEL = 'users.CustomUser'
+
+>>>>>>> 5f3157850eb87e28d70d2e6f1d58428d66ca0ed6
+>>>>>>> 0836948cd765c84e457c61238868684ca2780c47
+>>>>>>> 456b6310aad55a6943e785cf21b6c6f5a78ee605
