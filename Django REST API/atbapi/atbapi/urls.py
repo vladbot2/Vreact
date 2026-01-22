@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 """
 URL configuration for atbapi project.
 
@@ -30,3 +31,12 @@ urlpatterns = [
 ]
 
 urlpatterns += static(settings.IMAGES_URL, document_root=settings.IMAGES_ROOT)
+=======
+from django.contrib import admin
+from django.urls import path, include
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('api/', include('users.urls')),
+]
+>>>>>>> 5f3157850eb87e28d70d2e6f1d58428d66ca0ed6

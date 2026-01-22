@@ -32,6 +32,10 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'users',
+<<<<<<< HEAD
+=======
+    'product',
+>>>>>>> 5f3157850eb87e28d70d2e6f1d58428d66ca0ed6
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -158,4 +162,33 @@ SPECTACULAR_SETTINGS = {
     'VERSION': '1.0.0',
     'SERVE_INCLUDE_SCHEMA': False,
     'COMPONENT_SPLIT_REQUEST': True,
+<<<<<<< HEAD
 }
+=======
+}
+
+FRONTEND_URL='http://localhost:5173'
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.ukr.net'
+EMAIL_PORT = 2525 
+EMAIL_USE_SSL = True 
+EMAIL_HOST_USER = 'super.novakvova@ukr.net'
+EMAIL_HOST_PASSWORD = 'PdjZ074ufMqpy1MJ'
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+
+INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+
+    'rest_framework',
+    'users',
+]
+
+AUTH_USER_MODEL = 'users.CustomUser'
+
+>>>>>>> 5f3157850eb87e28d70d2e6f1d58428d66ca0ed6
