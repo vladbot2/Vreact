@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { GoogleLogin } from '@react-oauth/google'
 import axios from 'axios'
 
@@ -31,3 +32,12 @@ function App() {
 }
 
 export default App
+=======
+import Register from "./Register";
+
+function App() {
+    return <Register />;
+}
+
+export default App;
+>>>>>>> 0836948cd765c84e457c61238868684ca2780c47

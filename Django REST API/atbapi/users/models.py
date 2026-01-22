@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 0836948cd765c84e457c61238868684ca2780c47
 from django.db import models
 from django.contrib.auth.models import AbstractUser
 
@@ -12,4 +16,21 @@ class CustomUser(AbstractUser):
     phone = models.CharField(max_length=20, blank=True, null=True)
 
     def __str__(self):
+<<<<<<< HEAD
         return self.email
+=======
+        return self.email
+=======
+from django.contrib.auth.models import AbstractUser
+from django.db import models
+
+class CustomUser(AbstractUser):
+    phone = models.CharField(max_length=13, unique=True)
+
+    USERNAME_FIELD = 'email'
+    REQUIRED_FIELDS = ['username', 'phone']
+
+    def __str__(self):
+        return self.username
+>>>>>>> 5f3157850eb87e28d70d2e6f1d58428d66ca0ed6
+>>>>>>> 0836948cd765c84e457c61238868684ca2780c47

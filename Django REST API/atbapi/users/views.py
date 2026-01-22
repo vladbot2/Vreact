@@ -1,7 +1,12 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 0836948cd765c84e457c61238868684ca2780c47
 from rest_framework import viewsets, status
 from rest_framework.decorators import action
 from rest_framework.response import Response
 
+<<<<<<< HEAD
 from .serializers import LoginSerializer, RegisterSerializer, UserSerializer, PasswordResetRequestSerializer, SetNewPasswordSerializer
 from rest_framework import parsers
 from rest_framework_simplejwt.tokens import RefreshToken
@@ -9,6 +14,12 @@ from rest_framework_simplejwt.tokens import RefreshToken
 from django.utils.http import urlsafe_base64_encode, urlsafe_base64_decode
 from django.contrib.auth.tokens import default_token_generator
 
+=======
+from .serializers import RegisterSerializer, UserSerializer
+from rest_framework import parsers
+from rest_framework_simplejwt.tokens import RefreshToken
+
+>>>>>>> 0836948cd765c84e457c61238868684ca2780c47
 from .models import CustomUser
 
 class UserViewSet(viewsets.ReadOnlyModelViewSet):
@@ -34,6 +45,7 @@ class UserViewSet(viewsets.ReadOnlyModelViewSet):
                 status=status.HTTP_201_CREATED
             )
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+<<<<<<< HEAD
     
     @action(detail=False, methods=['post'], url_path='login', serializer_class=LoginSerializer)
     def login(self, request):
@@ -89,3 +101,27 @@ class UserViewSet(viewsets.ReadOnlyModelViewSet):
         user.set_password(serializer.validated_data['new_password'])
         user.save()
         return Response({"detail": "Пароль успішно змінено"}, status=status.HTTP_200_OK)
+=======
+=======
+from rest_framework.views import APIView
+from rest_framework.response import Response
+from rest_framework import status
+from .serializers import RegisterSerializer
+
+class RegisterView(APIView):
+    def post(self, request):
+        serializer = RegisterSerializer(data=request.data)
+
+        if serializer.is_valid():
+            serializer.save()
+            return Response(
+                {"success": "Реєстрація успішна"},
+                status=status.HTTP_201_CREATED
+            )
+
+        return Response(
+            serializer.errors,
+            status=status.HTTP_400_BAD_REQUEST
+        )
+>>>>>>> 5f3157850eb87e28d70d2e6f1d58428d66ca0ed6
+>>>>>>> 0836948cd765c84e457c61238868684ca2780c47
