@@ -1,18 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1f50f49e-cc5c-4272-8f23-8bf698e1b2ab" name="Changes" comment="" />
+    <list default="true" id="1f50f49e-cc5c-4272-8f23-8bf698e1b2ab" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Django REST API/atbapi/atbapi/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Django REST API/atbapi/atbapi/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Django REST API/atbapi/atbapi/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Django REST API/atbapi/atbapi/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Django REST API/atbapi/users/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Django REST API/atbapi/users/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Django REST API/atbapi/users/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/Django REST API/atbapi/users/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Django REST API/atbapi/users/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Django REST API/atbapi/users/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Django REST API/atbapi/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Django REST API/atbapi/users/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Django REST API/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Django REST API/requirements.txt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/my-vite" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 8
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="38cPtBZhWkS3zOAPlZVqKUiQKhV" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -24,7 +33,13 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "git-widget-placeholder": "Merging main",
+    "git-widget-placeholder": "main",
+    "javascript.preferred.runtime.type.id": "node",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -43,6 +58,7 @@
       <option name="presentableId" value="Default" />
       <updated>1769096097605</updated>
       <workItem from="1769096098703" duration="6000" />
+      <workItem from="1769168589971" duration="326000" />
     </task>
     <servers />
   </component>

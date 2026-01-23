@@ -3,18 +3,7 @@ import axios from "axios";
 import {Link, useNavigate} from "react-router-dom";
 import {APP_ENV} from "../env";
 import type {ILoginUser} from "../types/account/ILoginUser.ts";
-<<<<<<< HEAD
 import {useGoogleLogin} from "@react-oauth/google";
-=======
-<<<<<<< HEAD
-import {useGoogleLogin} from "@react-oauth/google";
-=======
-<<<<<<< HEAD
-=======
-import {useGoogleLogin} from "@react-oauth/google";
->>>>>>> 0836948cd765c84e457c61238868684ca2780c47
->>>>>>> 456b6310aad55a6943e785cf21b6c6f5a78ee605
->>>>>>> 03e93217a6fbd32a2ead0a15f9d43ce459b8c8e7
 
 const LoginPage = () => {
     const [form] = Form.useForm<ILoginUser>();
@@ -46,14 +35,6 @@ const LoginPage = () => {
         // navigate("/");
     }
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 456b6310aad55a6943e785cf21b6c6f5a78ee605
->>>>>>> 03e93217a6fbd32a2ead0a15f9d43ce459b8c8e7
     const handleLoginClick = useGoogleLogin({
         onSuccess: tokenResponse =>
         {
@@ -62,13 +43,6 @@ const LoginPage = () => {
         },
     });
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 0836948cd765c84e457c61238868684ca2780c47
->>>>>>> 456b6310aad55a6943e785cf21b6c6f5a78ee605
->>>>>>> 03e93217a6fbd32a2ead0a15f9d43ce459b8c8e7
     return (
         <>
             <div className={"min-h-screen xl:flex"}>
@@ -130,15 +104,6 @@ const LoginPage = () => {
                                     </Form.Item>
                                 </div>
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> 456b6310aad55a6943e785cf21b6c6f5a78ee605
->>>>>>> 03e93217a6fbd32a2ead0a15f9d43ce459b8c8e7
                                 <div className={"mt-4"}>
                                     <button
                                         onClick={(e) => {
@@ -150,13 +115,6 @@ const LoginPage = () => {
                                         {'Вхід через Google'}
                                     </button>
                                 </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 0836948cd765c84e457c61238868684ca2780c47
->>>>>>> 456b6310aad55a6943e785cf21b6c6f5a78ee605
->>>>>>> 03e93217a6fbd32a2ead0a15f9d43ce459b8c8e7
                             </Form>
                         </div>
                     </div>
