@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 456b6310aad55a6943e785cf21b6c6f5a78ee605
+>>>>>>> 03e93217a6fbd32a2ead0a15f9d43ce459b8c8e7
 from rest_framework import serializers
 from .utils import compress_image
 from rest_framework import serializers
@@ -10,6 +17,18 @@ from django.utils.encoding import force_bytes
 from django.core.mail import send_mail
 from django.conf import settings
 from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+from rest_framework import serializers
+from .utils import compress_image
+from .models import CustomUser
+>>>>>>> 0836948cd765c84e457c61238868684ca2780c47
+>>>>>>> 456b6310aad55a6943e785cf21b6c6f5a78ee605
+>>>>>>> 03e93217a6fbd32a2ead0a15f9d43ce459b8c8e7
 
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
@@ -62,13 +81,41 @@ class RegisterSerializer(serializers.ModelSerializer):
             user.save()
 
         return user
+<<<<<<< HEAD
     
 class LoginSerializer(serializers.ModelSerializer):
     username = serializers.CharField()
+=======
+<<<<<<< HEAD
+    
+class LoginSerializer(serializers.ModelSerializer):
+    username = serializers.CharField()
+=======
+<<<<<<< HEAD
+    
+class LoginSerializer(serializers.ModelSerializer):
+    username = serializers.CharField()
+=======
+=======
+import re
+from rest_framework import serializers
+from .models import CustomUser
+
+class RegisterSerializer(serializers.ModelSerializer):
+>>>>>>> 0836948cd765c84e457c61238868684ca2780c47
+>>>>>>> 456b6310aad55a6943e785cf21b6c6f5a78ee605
+>>>>>>> 03e93217a6fbd32a2ead0a15f9d43ce459b8c8e7
     password = serializers.CharField(write_only=True)
 
     class Meta:
         model = CustomUser
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 456b6310aad55a6943e785cf21b6c6f5a78ee605
+>>>>>>> 03e93217a6fbd32a2ead0a15f9d43ce459b8c8e7
         fields = [
             'username',
             'password',
@@ -132,4 +179,47 @@ class SetNewPasswordSerializer(serializers.Serializer):
     def save(self):
         user = self.validated_data['user']
         user.set_password(self.validated_data['new_password'])
+<<<<<<< HEAD
         user.save()
+=======
+<<<<<<< HEAD
+        user.save()
+=======
+        user.save()
+=======
+        fields = ('email', 'username', 'password', 'phone')
+
+    def validate_password(self, value):
+        if len(value) < 8:
+            raise serializers.ValidationError(
+                "Пароль повинен містити мінімум 8 символів"
+            )
+        if not re.search(r"[A-Z]", value):
+            raise serializers.ValidationError(
+                "Пароль повинен містити хоча б одну велику літеру"
+            )
+        if not re.search(r"\d", value):
+            raise serializers.ValidationError(
+                "Пароль повинен містити хоча б одну цифру"
+            )
+        return value
+
+    def validate_phone(self, value):
+        if not re.match(r'^\+380\d{9}$', value):
+            raise serializers.ValidationError(
+                "Телефон має бути у форматі +380XXXXXXXXX"
+            )
+        return value
+
+    def create(self, validated_data):
+        user = CustomUser.objects.create_user(
+            username=validated_data['username'],
+            email=validated_data['email'],
+            phone=validated_data['phone'],
+            password=validated_data['password']
+        )
+        return user
+>>>>>>> 5f3157850eb87e28d70d2e6f1d58428d66ca0ed6
+>>>>>>> 0836948cd765c84e457c61238868684ca2780c47
+>>>>>>> 456b6310aad55a6943e785cf21b6c6f5a78ee605
+>>>>>>> 03e93217a6fbd32a2ead0a15f9d43ce459b8c8e7
